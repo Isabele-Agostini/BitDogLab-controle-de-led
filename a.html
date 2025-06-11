@@ -1,0 +1,47 @@
+"HTTP/1.1 200 OK\r
+"Content-Type: text/html\r
+"\r
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LED Control</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        body { background : linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); min-height: 100vh; }
+ .card { margin: 40px auto; max-width: 500px; box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37); }
+ .temperature { font-size: 2.5rem; color: #0d6efd; }
+ .led-btn { width: 100%; margin-bottom: 15px; font-size: 1.3rem; }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        " <div class="card p-4">
+            " <h1 class="mb-4 text-primary"><i class="bi bi-lightbulb"></i> Controle de LEDs</h1>
+            " <form action="./blue_on"><button class="btn btn-primary led-btn" type="submit"><i class="bi
+                        bi-lightbulb-fill"></i> Ligar Azul</button></form>
+            " <form action="./blue_off"><button class="btn btn-outline-primary led-btn" type="submit"><i
+                        class="bi bi-lightbulb"></i> Desligar Azul</button></form>
+            " <form action="./green_on"><button class="btn btn-success led-btn" type="submit"><i class="bi
+                        bi-lightbulb-fill"></i> Ligar Verde</button></form>
+            " <form action="./green_off"><button class="btn btn-outline-success led-btn" type="submit"><i
+                        class="bi bi-lightbulb"></i> Desligar Verde</button></form>
+            " <form action="./red_on"><button class="btn btn-danger led-btn" type="submit"><i class="bi
+                        bi-lightbulb-fill"></i> Ligar Vermelho</button></form>
+            " <form action="./red_off"><button class="btn btn-outline-danger led-btn" type="submit"><i class="bi
+                        bi-lightbulb"></i> Desligar Vermelho</button></form>
+            "
+            <hr>
+            " <div class="temperature mb-2"><i class="bi bi-thermometer-half"></i> Temperatura Interna: %.2f &deg;C
+            </div>
+            "
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
